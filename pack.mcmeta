@@ -1,0 +1,13 @@
+{
+    "pack": {
+        "id": "invincible_iron_man",
+        "pack_format": 15,
+        "description": "Create and utilize the armors from the Iron Man Comics",
+        "version": "1.0.0"
+    },
+    "dependencies": {
+        "common": {},
+        "fabric": {},
+        "forge": {}
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 1,
+    "authors": [
+        "TDreamer7"
+    ],
+    "environment": "*",
+    "id": "invincible_iron_man",
+    "version": "1.0.0",
+    "name": "Invincible Iron Man",
+    "description": "Create and utilize the armors from the Iron Man Comics",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}

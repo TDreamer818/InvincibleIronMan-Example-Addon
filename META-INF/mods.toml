@@ -1,0 +1,21 @@
+modLoader="lowcodefml"
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="invincible_iron_man"
+version="1.0.0"
+logoFile = "logo.png"
+logoBlur = false
+displayName="Invincible Iron Man"
+description='''
+Create and utilize the armors from the Iron Man Comics
+'''
+
+[[dependencies.invincible_iron_man]]
+modId = "palladium"
+mandatory = true
+versionRange = "[4.5.9,)"
+ordering = "NONE"
+side = "BOTH"
