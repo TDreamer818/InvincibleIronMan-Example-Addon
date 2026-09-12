@@ -1,0 +1,106 @@
+{
+    "name": "Iron Man Model 1",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/stone.png",
+    "icon": "minecraft:iron_helmet",
+    "gui_display_type": "tree",
+    "abilities": {
+
+        "armor_dummy":{
+            "type": "palladium:dummy",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Armor Plating",
+            "bar_color": "gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "The Steel armor plating grants increased resistance to a multitude of damage sources",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "armor":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Armor",
+            "bar_color": "gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "The armor plating grants increased resistance",
+            "attribute": "minecraft:generic.armor",
+            "amount": 18,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "armor_toughness":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Armor Toughness",
+            "bar_color": "gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "The armor plating grants increased resistance",
+            "attribute": "minecraft:generic.armor_toughness",
+            "amount": 8,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "knockback_resistance":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Knockback Resistance",
+            "bar_color": "gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "The armor plating grants increased resistance",
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.4,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "strenght":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Strenght",
+            "bar_color": "gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "The armor grants increased strenght",
+            "attribute": "palladium:punch_damage",
+            "amount": 6,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        }
+    }
+}
