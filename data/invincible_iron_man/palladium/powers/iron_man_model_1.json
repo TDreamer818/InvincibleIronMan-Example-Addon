@@ -10,11 +10,11 @@
             "type": "palladium:dummy",
             "icon": "minecraft:iron_chestplate",
             "title": "Armor Plating",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
-            "gui_position": "null",
+            "gui_position": [0, 0],
             "gui_frame_type": "task",
             "description": "The Steel armor plating grants increased resistance to a multitude of damage sources.",
             "conditions": {
@@ -26,7 +26,7 @@
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "Armor",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": true,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -34,7 +34,7 @@
             "gui_frame_type": "task",
             "description": "The armor plating grants increased resistance",
             "attribute": "minecraft:generic.armor",
-            "amount": 18,
+            "amount": 22,
             "operation": 0,
             "uuid": "98042c07-9010-48a9-ac2d-7e3dc831855f",
             "conditions": {
@@ -46,7 +46,7 @@
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "Armor Toughness",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": true,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -66,7 +66,7 @@
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "Knockback Resistance",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": true,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -106,7 +106,7 @@
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_sword",
             "title": "Strength",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -126,17 +126,17 @@
             "type": "palladium:energy_beam",
             "icon": "minecraft:blaze_rod",
             "title": "Unibeam",
-            "bar_color": "gray",
-            "list_index": -2,
+            "bar_color": "light_gray",
+            "list_index": 2,
             "gui_position": [-1, 0],
             "gui_frame_type": "task",
-            "description": "Shoot a concentrated beamn from your chest Arc.",
+            "description": "Shoot a concentrated beam from your chest Arc.",
             "energy_beam": "invincible_iron_man:unibeam",
             "damage_type": "null",
             "damage": 15,
             "max_distance": 10,
             "speed": 0.5,
-            "set_on_fire_seconds": 0,
+            "set_on_fire_seconds": 5,
             "cause_fire": false,
             "smelt_blocks": true,
             "commands_on_block_hit": [],
@@ -144,10 +144,12 @@
             "conditions": {
                 "enabling": [
                     {
-                        "type": "palladium:held",
-                        "cooldown": 60,
+                        "type": "palladium:activation",
+                        "cooldown": 240,
+                        "ticks": 60,
                         "key_type": "key_bind",
-                        "needs_empty_hand": false
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
                     }
                 ],
                 "unlocking": []
@@ -157,7 +159,7 @@
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_boots",
             "title": "Jet Boots",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -177,7 +179,7 @@
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_boots",
             "title": "Jet Boots",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": true,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -197,7 +199,7 @@
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_boots",
             "title": "Jet Boots",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": true,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -217,7 +219,7 @@
             "type": "palladium:dummy",
             "icon": "minecraft:anvil",
             "title": "Heavy Weight",
-            "bar_color": "gray",
+            "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -249,18 +251,18 @@
                 "unlocking": []
             }
         },
-        "flamethrower":{
+        "repulsor":{
             "type": "palladium:aim",
-            "icon": "minecraft:blaze_powder",
-            "title": "Flamethrower",
-            "bar_color": "gray",
+            "icon": "minecraft:end_rod",
+            "title": "Repulsor",
+            "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": -1,
+            "list_index": 0,
             "gui_position": [0, 1],
             "gui_frame_type": "task",
-            "description": "Shoots a wave of fire.",
-            "time": 10,
+            "description": "The Repulsor Technology allows to shoot concentrated energy.",
+            "time": 1,
             "arm": "main_arm",
             "conditions": {
                 "enabling": [
@@ -274,31 +276,31 @@
                 "unlocking": []
             }
         },
-        "flame":{
+        "repulsor_beam_right":{
             "type": "palladium:energy_beam",
             "icon": "minecraft:blaze_rod",
-            "title": "Flame",
+            "title": "Beam",
             "bar_color": "light_gray",
             "hidden": true,
             "hidden_in_bar": true,
             "list_index": -1,
             "gui_position": "null",
             "gui_frame_type": "task",
-            "description": "Shoot a flame",
-            "energy_beam": "example:energy_beam",
+            "description": "Shoot a beam",
+            "energy_beam": "invincible_iron_man:repulsor_beam_right",
             "damage_type": "null",
-            "damage": 5,
-            "max_distance": 5,
+            "damage": 6,
+            "max_distance": 20,
             "speed": 0.5,
-            "set_on_fire_seconds": 5,
-            "cause_fire": true,
+            "set_on_fire_seconds": 3,
+            "cause_fire": false,
             "smelt_blocks": false,
             "commands_on_block_hit": [],
             "commands_on_entity_hit": [],
             "conditions": {
                 "enabling": [                {
                                     "type": "palladium:held",
-                                    "cooldown": 0,
+                                    "cooldown": 100,
                                     "key_type": "right_click",
                                     "needs_empty_hand": false
                                 }],
@@ -306,8 +308,316 @@
                                         {
                                             "type": "palladium:ability_enabled",
                                             "power": "null",
-                                            "ability": "flamethrower"
+                                            "ability": "repulsor"
                                         }
+                ]
+            }
+        },
+        "repulsor_beam_left":{
+            "type": "palladium:energy_beam",
+            "icon": "minecraft:blaze_rod",
+            "title": "Beam",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "Shoot a beam",
+            "energy_beam": "invincible_iron_man:repulsor_beam_left",
+            "damage_type": "null",
+            "damage": 6,
+            "max_distance": 20,
+            "speed": 0.5,
+            "set_on_fire_seconds": 3,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [],
+            "commands_on_entity_hit": [],
+            "conditions": {
+                "enabling": [                
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 100,
+                        "key_type": "left_click",
+                        "needs_empty_hand": false
+                    }
+                            ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "repulsor"
+                    }
+]
+            }
+        },
+        "repulsor2":{
+            "type": "palladium:aim",
+            "icon": "minecraft:blaze_powder",
+            "title": "Repulsor 2",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "The Repulsor Technology allows to shoot concentrated energy.",
+            "time": 1,
+            "arm": "off_arm",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "repulsor_beam_left"
+                    }
+                ]
+            }
+        },
+        "repulsor_arms": {
+            "type": "palladium:show_both_arms",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "repulsor_beam_left"
+                    }
+                ]
+            }
+        },
+        "damage_immunity":{
+            "type": "palladium:damage_immunity",
+            "icon": "minecraft:potion",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": [-1, 1],
+            "gui_frame_type": "task",
+            "description": "null",
+            "damage_sources": [
+                "minecraft:is_fire",
+                "minecraft:is_projectile"
+            ],
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "secret_identity":{
+            "type": "palladium:name_change",
+            "icon": "minecraft:iron_helmet",
+            "title": "Secret Identity",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": [1, 1],
+            "gui_frame_type": "task",
+            "description": "The helmet keeps your identity concealed.",
+            "name": {
+                "text": "Iron Man"
+            },
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "size":{
+            "type": "palladium:size",
+            "icon": "palladium:textures/icon/size.png",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "scale": 1.1,
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "rocket":{
+            "type": "palladium:projectile",
+            "icon": "minecraft:snowball",
+            "title": "Wrist Rocket",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 3,
+            "gui_position": [2, 1],
+            "gui_frame_type": "task",
+            "description": "Shoot a rocket from your wrist.",
+            "entity_type": "minecraft:snowball",
+            "entity_data": "null",
+            "inaccuracy": 0,
+            "velocity": 1.5,
+            "swinging_arm": "none",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+            "conditions": {
+                "enabling": [
+                      
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 120,
+                        "ticks": 10,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "aim_rocket":{
+            "type": "palladium:aim",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "time": 10,
+            "arm": "main_arm",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [                {
+                                    "type": "palladium:ability_enabled",
+                                    "power": "null",
+                                    "ability": "rocket"
+                                }]
+            }
+        },
+        "flamethrower":{
+            "type": "palladium:energy_beam",
+            "icon": "minecraft:blaze_powder",
+            "title": "Flamethrower",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": [-2, 1],
+            "gui_frame_type": "task",
+            "description": "Shoot fire from your torso plate.",
+            "energy_beam": "invincible_iron_man:flamethrower",
+            "damage_type": "null",
+            "damage": 5,
+            "max_distance": 10,
+            "speed": 0.5,
+            "set_on_fire_seconds": 10,
+            "cause_fire": true,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [],
+            "commands_on_entity_hit": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 60,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "rust":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:anvil",
+            "title": "Rust",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": [0, 2],
+            "gui_frame_type": "task",
+            "description": "null",
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": -1,
+            "operation": 0,
+            "uuid": "1692440c-5bc4-484c-afe3-0f9c1538c7bc",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                                        {
+                                            "type": "palladium:in_water"
+                                        }
+                ]
+            }
+        },
+        "skates":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:stick",
+            "title": "Roller Skates",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 4,
+            "gui_position": [1, 2],
+            "gui_frame_type": "task",
+            "description": "You can toggle on the Roller Skates on your boots to increase speed.",
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.11,
+            "operation": 0,
+            "uuid": "9d4646fa-83a3-4285-86de-6e0cb87c6e51",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "skates_step":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "attribute": "forge:step_height_addition",
+            "amount": 1,
+            "operation": 0,
+            "uuid": "d8663e03-bbce-407b-9a4f-5f430cb3dd01",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                     
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "skates"
+                    }
                 ]
             }
         }

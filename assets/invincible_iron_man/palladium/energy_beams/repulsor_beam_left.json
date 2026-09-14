@@ -1,14 +1,14 @@
 [
     {
         "type": "palladium:laser",
-        "body_part": "chest",
+        "body_part": "left_arm",
         "glow_color": "#ffd76a",
         "core_color": "#F4EDA7",
         "rainbow": false,
         "glow_opacity": 1,
         "core_opacity": 1,
         "bloom": 2,
-        "size": 2,
+        "size": 1,
         "normal_transparency": false,
         "rotation": 1,
         "rotation_speed": 2,
@@ -17,9 +17,9 @@
             "third_person": true
         },
         "offset": [
-            0,
-            -3,
-            -2
+            1,
+            -8,
+            0
         ]
     }
 ]
