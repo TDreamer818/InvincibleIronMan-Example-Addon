@@ -1,0 +1,72 @@
+{
+    "name": "Shrapnel",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/white_wool.png",
+    "icon": "minecraft:wither_skeleton_skull",
+    "gui_display_type": "tree",
+    "abilities": {
+        "debuffs":{
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "Shrapnel",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": [0, 0],
+            "gui_frame_type": "task",
+            "description": "Shrapnel on your heart weaken you.",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "effect give @s minecraft:weakness infinite 0 false"
+            ],
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "equipped_electro_chest":{
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "Electro Magnetic Chestplate",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": [0, 1],
+            "gui_frame_type": "task",
+            "description": "Electro Magnetic Chestplate",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "tag @s add has_EM_chestplate"
+            ],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "power": "null",
+                                "ability": "debuffs"
+                            }
+                        ]
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "minecraft:leather_chestplate"
+                        },
+                        "slot": "chest"
+                    }
+                    
+                ]
+            }
+        }
+
+    }
+}
