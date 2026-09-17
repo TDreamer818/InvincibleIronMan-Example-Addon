@@ -119,7 +119,7 @@
             "gui_frame_type": "task",
             "description": "The armor grants increased strenght.",
             "attribute": "minecraft:generic.attack_damage",
-            "amount": 6,
+            "amount": 9,
             "operation": 0,
             "uuid": "bb3089fb-92d5-485e-b414-5119dd891f8d",
             "conditions": {
@@ -132,7 +132,7 @@
             "icon": "minecraft:blaze_rod",
             "title": "Unibeam",
             "bar_color": "light_gray",
-            "list_index": 2,
+            "list_index": 4,
             "gui_position": [
                 -1,
                 0
@@ -339,7 +339,7 @@
             "damage": 6,
             "max_distance": 20,
             "speed": 0.5,
-            "set_on_fire_seconds": 3,
+            "set_on_fire_seconds": 2,
             "cause_fire": false,
             "smelt_blocks": false,
             "commands_on_block_hit": [],
@@ -348,7 +348,7 @@
                 "enabling": [
                     {
                         "type": "palladium:held",
-                        "cooldown": 100,
+                        "cooldown": 60,
                         "key_type": "right_click",
                         "needs_empty_hand": false
                     }
@@ -378,7 +378,7 @@
             "damage": 6,
             "max_distance": 20,
             "speed": 0.5,
-            "set_on_fire_seconds": 3,
+            "set_on_fire_seconds": 2,
             "cause_fire": false,
             "smelt_blocks": false,
             "commands_on_block_hit": [],
@@ -387,7 +387,7 @@
                 "enabling": [
                     {
                         "type": "palladium:held",
-                        "cooldown": 100,
+                        "cooldown": 60,
                         "key_type": "left_click",
                         "needs_empty_hand": false
                     }
@@ -516,7 +516,7 @@
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 3,
+            "list_index": 2,
             "gui_position": [
                 2,
                 1
@@ -605,7 +605,12 @@
                 ],
                 "unlocking": [
                     {
-                        "type": "palladium:on_ground"
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:is_hovering_or_flying"
+                            }
+                        ]
                     }
                 ]
             }
@@ -625,7 +630,7 @@
             "gui_frame_type": "task",
             "description": "null",
             "attribute": "minecraft:generic.movement_speed",
-            "amount": -1,
+            "amount": -0.08,
             "operation": 0,
             "uuid": "1692440c-5bc4-484c-afe3-0f9c1538c7bc",
             "conditions": {
@@ -644,7 +649,7 @@
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 4,
+            "list_index": 3,
             "gui_position": [
                 1,
                 2
@@ -652,7 +657,7 @@
             "gui_frame_type": "task",
             "description": "You can toggle on the Roller Skates on your boots to increase speed.",
             "attribute": "minecraft:generic.movement_speed",
-            "amount": 0.11,
+            "amount": 0.05,
             "operation": 0,
             "uuid": "9d4646fa-83a3-4285-86de-6e0cb87c6e51",
             "conditions": {
@@ -665,7 +670,16 @@
                         "allow_scrolling_when_crouching": true
                     }
                 ],
-                "unlocking": []
+                "unlocking": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:is_hovering_or_flying"
+                            }
+                        ]
+                    }
+                ]
             }
         },
         "skates_step": {
